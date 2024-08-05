@@ -24,7 +24,7 @@ function getEndpoint(request, response) {
     //return response.sendFile(path.join(__dirname, 'public', 'index.html'))
 
     // 👇 damit schicken wir eine einfache JSON response
-    //return response.json({message: "Hello World"})
+    return response.json({message: "Hello World"})
 
     // 👇 damit schicken wir eine einfache Text response
     //return response.send("Hello World")
