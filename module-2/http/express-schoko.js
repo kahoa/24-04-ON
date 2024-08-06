@@ -16,4 +16,37 @@ Erstelle eine Express-Anwendung, die einen Endpunkt /schokolade bereitstellt. We
 // Bonus 💰💰:
 // mit einem get request an /schokolade/1 oder /schokolade/2 oder schokolade/3 sollte man ein Item aus dem Schokoladenrezeptideen array
 
+const express = require("express");
+const app = express();
+const port = 3000;
+const schokolade = [
+  {
+    name: "Schokoladenkekse",
+    rezept:
+      "Zutaten: Mehl, Zucker, Kakaopulver, Butter, Eier. Zubereitung: Alles vermengen und backen.",
+  },
+  {
+    name: "Schokoladenkuchen",
+    rezept:
+      "Zutaten: Mehl, Zucker, Kakaopulver, Butter, Eier, Backpulver. Zubereitung: Alle Zutaten mischen und backen.",
+  },
+  {
+    name: "Schokoladenfondue",
+    rezept:
+      "Zutaten: Schokolade, Sahne. Zubereitung: Schokolade schmelzen, Sahne hinzufügen und gut vermengen.",
+  },
+  {
+    name: "Schokoladenmousse",
+    rezept:
+      "Zutaten: Schokolade, Sahne, Eier. Zubereitung: Schokolade schmelzen, mit geschlagener Sahne und Eiern vermengen.",
+  },
+];
+app.get("/schokolade", (req, res) => {
+  const randomIndex = Math.floor(Math.random() * schokolade.length);
+  res.send(schokolade[randomIndex]);
+});
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}/`);
+});
+
 
