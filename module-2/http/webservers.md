@@ -10,7 +10,9 @@ Express:
 8. Move your app to the cloud: scp -i "your-key-file.pem" -r /path/to/your-express-app ubuntu@your-instance-public-dns:/home/ubuntu/
 9. Install dependencis: npm install
 10. Start the server locally: node app.js
-11. Test the server locally: curl http://localhost:3000
+11. Test the server locally: curl http://public-dns:3000
+
+Optional: auf port 80 starten!!
 
 Optional:
 1. Install pm2: sudo npm install pm2 -g
