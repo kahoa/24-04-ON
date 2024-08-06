@@ -5,7 +5,7 @@ Express:
 3. ssh into the instance: ssh -i "your-key-file.pem" ubuntu@your-instance-public-dns
 4. sudo apt update -y  # For Ubuntu
 5. curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-6. sudo apt-get install -y nodejs git
+6. sudo apt-get install -y nodejs
 7. Verify installation: node -v && npm -v
 8. Move your app to the cloud: scp -i "your-key-file.pem" -r /path/to/your-express-app ubuntu@your-instance-public-dns:/home/ubuntu/
 9. Install dependencis: npm install
