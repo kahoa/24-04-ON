@@ -15,3 +15,5 @@ Erstelle eine Express-Anwendung, die einen Endpunkt /schokolade bereitstellt. We
 
 // Bonus 💰💰:
 // mit einem get request an /schokolade/1 oder /schokolade/2 oder schokolade/3 sollte man ein Item aus dem Schokoladenrezeptideen array
+
+
