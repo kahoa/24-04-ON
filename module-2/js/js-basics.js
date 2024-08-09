@@ -125,6 +125,7 @@ function id(x) {
     return x
 }
 
+
 // 10 is the argument
 // function call
 id(10)
@@ -165,3 +166,74 @@ test()
 console.log(greeting)
 console.log(greet2)
 console.log(greet3)
+
+function modifyName(name) {
+    return name + "!!!"
+}
+
+function addToName(modifiedName) {
+    return modifiedName + "???"
+}
+
+function lastModification(newNewModifiedName) {
+    return newNewModifiedName + "///"
+}
+
+// function composition or function chaining
+const output = lastModification(addToName(modifyName("Dimi")))
+
+console.log(output)
+
+let teilnehmer = ["Marius", "Christian", "Jihen"]
+
+function add(name) {
+    teilnehmer.push(name)
+    return "added"
+}
+
+
+function changeName(name) {
+    const position = teilnehmer.indexOf(name)
+    const newName = name.toUpperCase()
+    teilnehmer[position] = newName
+    // name muss im array gefunden werden
+    // name muss geändert werden .toUpperCase()
+    // name muss zurückgesetzt werden an die gleiche stelle
+}
+
+changeName("Christian")
+
+add("Alexander")
+add("Ilona")
+add("Dimi")
+
+console.log("alle teilnehmer vor remove()", teilnehmer)
+
+function remove(name) {
+    console.log("der name muss entfernt werden", name)
+    const position = teilnehmer.indexOf(name)
+    teilnehmer.splice(position, 1)
+    return "success"
+
+}
+
+remove("Jihen")
+
+
+console.log("teilnehmer nach remove()", teilnehmer)
+
+//console.log(teilnehmer)
+
+// todo application, diese muss todos hinzufügen, entfernen, ändern, anzeigen
+
+
+// CRUD application
+const todos = []
+
+// function addTodo() {}
+// function removeTodo() {}
+// function changeTodo() {}
+// function showTodos() {}
+
+// todo ist einfach ein string, z.B. auto waschen gehen
+
