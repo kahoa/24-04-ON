@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "aufgabe1": "node aufgabe1.js",
+    "aufgabe2": "node aufgabe2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
