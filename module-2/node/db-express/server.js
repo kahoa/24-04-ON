@@ -1,0 +1,39 @@
+import express from "express"
+import fs from "fs"
+import { initializeDatabase, getTodosFromDB, addTodoToDB } from "./db/database.js"
+
+const app = express()
+const port = 3000
+
+
+
+// Serve statische dateien im Ordner public
+app.use(express.static("public"))
+app.use(express.json())
+const db = initializeDatabase()
+
+
+app.get("/todos", async (req, res) => {
+    // jetzt müssen wir aus der datenbank auslesen
+    const todos = await getTodosFromDB(db)
+    console.log({ todos })
+    let onlyTask = [];
+    for (let eintrag of todos) {
+        onlyTask.push(eintrag.task)
+    }
+    console.log({ onlyTask })
+    res.send(onlyTask)
+})
+
+
+app.post("/todos", async (req, res) => {
+    const body = req.body
+    const todo = body.todo
+    await addTodoToDB(db, todo)
+    res.send("OK")
+
+})
+
+app.listen(port, () => { console.log("Server läuft auf Port 3000") })
+
+
