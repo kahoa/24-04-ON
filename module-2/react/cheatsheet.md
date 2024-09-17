@@ -1,4 +1,4 @@
-Hier ist die Erklärung in **Markdown**:
+### **JavaScript Ausdruck (Expression) Beispiel:**
 
 ```markdown
 ### **JavaScript Ausdruck (Expression) Beispiel:**
