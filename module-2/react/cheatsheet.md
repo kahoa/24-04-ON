@@ -1,8 +1,5 @@
 ### **JavaScript Ausdruck (Expression) Beispiel:**
 
-```markdown
-### **JavaScript Ausdruck (Expression) Beispiel:**
-
 ```js
 let x = 5 + 3;
 ```
@@ -26,6 +23,6 @@ if (x > 5) {
 Zusammengefasst:
 - **Ausdrücke** liefern Werte (z.B. `5 + 3`).
 - **Anweisungen** führen Aktionen aus (z.B. `if`-Blöcke, Schleifen, Variablenzuweisungen).
-```
+
 
 Du kannst diesen Markdown-Code direkt in einem Markdown-Editor oder Viewer verwenden!
