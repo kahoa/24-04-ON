@@ -1,5 +1,3 @@
-Natürlich! Hier ist eine einfache Anleitung, wie du in einer **Vite React App** einen **Counter** erstellen und diesen mithilfe von **Jest** testen kannst. Wir gehen Schritt für Schritt vor:
-
 ### 1. Erstellen einer neuen Vite React App
 
 Führe im Terminal folgenden Befehl aus, um eine neue Vite-React-App zu erstellen:
