@@ -19,12 +19,18 @@ function MultiCounter() {
 
     const startValues = [0, 10, 20, 30, 40, 50, 60]
     // Rendere alle Listenelemente als Counter-Komponenten. Benutze hierfür map oder forEach
+    // Map und filter sind die wichtigsten Funktionen im Umgang mit Listen von Daten:
+
+    // Map wendet eine Funktion auf jedes Element der Liste an
+    
+    // Filter wendet eine Filterfunktion auf jedes Element der Liste an und behält genau diejenigen unverändert, 
+    // bei denen die Filterfunktion das Ergebnis "true" hat
 
     return(
         <>
-            <Counter startvalue={0}/>
-            <Counter startvalue={10}/>
-            <Counter startvalue={20}/>
+            {startValues.map((value) => (
+                <Counter startvalue={value}/>
+            ))}
         </>
     )
 }

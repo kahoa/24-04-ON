@@ -1,6 +1,7 @@
 import TodoList from "./components/TodoList"
 import Profile from "./components/Props"
 import PackingList from "./components/ConditionalRendering"
+import List from "./components/RenderingLists"
 import {useState} from "react"
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
   })
 
   // Änderung des state objects kurz und prägnant mit "spread syntax":
-  setStateObject({...stateObject, state3: "Verändert"})
+  // setStateObject({...stateObject, state3: "Verändert"})
 
   // Spread syntax spart volles ausschreiben von:
   const lang = {
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <>
-      <PackingList/>
+      <List/>
     </>
   )
 }

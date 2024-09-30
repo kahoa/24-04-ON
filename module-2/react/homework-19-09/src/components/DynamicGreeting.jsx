@@ -11,6 +11,10 @@ function DynamicGreeting(){
         setColor(chosenColor)
     }
 
+    const resetButton = () => {
+        setName("")
+    }
+
     return(
         <div style={{
                 backgroundColor: color,
@@ -18,7 +22,7 @@ function DynamicGreeting(){
             }}>
             <input value={name} onChange={(e) => setName(e.target.value)}/>
             <h2>Hallo, {name}!</h2>
-            {/** TODO: Füge einen Button hinzu, der den Namen resetted */}
+            <button onClick={resetButton}>Reset name</button>
             <button onClick={changeColor}>Farbe ändern</button>
         </div>
     )
