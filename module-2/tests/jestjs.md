@@ -117,10 +117,24 @@ describe('Counter Component', () => {
   });
 
   test('should decrement the counter on "Decrement" button click', () => {
+    // Funktion: render kommt von der React Testing Library und wird verwendet, um eine React-Komponente in einer simulierten DOM-Umgebung (die vom Browser unabhängig ist) zu rendern.
+    // Bedeutung: In diesem Fall wird die Counter-Komponente in der Testumgebung "gerendert". Dies bedeutet, dass die Komponente mit allen UI-Elementen (wie Buttons und Texten) auf dem virtuellen DOM dargestellt wird.
     render(<Counter />);
+
+    // Funktion: Hier wird die Methode getByText der screen-API verwendet. screen ist eine globale API, die von der React Testing Library bereitgestellt wird und uns Zugriff auf den "gerenderten" virtuellen DOM gewährt.
+    // Bedeutung: Wir suchen nach einem Text, der das Wort „Decrement“ enthält. Der reguläre Ausdruck /Decrement/i steht für eine Suche, die nicht auf Groß- oder Kleinschreibung achtet (deshalb das i am Ende des Ausdrucks). Das bedeutet, dass sowohl "Decrement" als auch "decrement" gefunden werden.
     const buttonElement = screen.getByText(/Decrement/i);
+
+    // Funktion: fireEvent ist ein Utility von React Testing Library, das es uns ermöglicht, Ereignisse zu simulieren (wie Klicks, Tastendrücke usw.).
+    // Bedeutung: Hier simulieren wir einen Klick auf das vorher gefundene Button-Element (buttonElement), das den Text „Decrement“ trägt.
     fireEvent.click(buttonElement);
+
+    //Funktion: Wieder wird die Methode getByText verwendet, um nach einem Text auf dem Bildschirm zu suchen. In diesem Fall suchen wir nach dem Text „Counter: -1“, der dem Zähler entspricht, nachdem der Button „Decrement“ angeklickt wurde.
+    // Bedeutung: Nachdem der Button gedrückt wurde und der Zähler um 1 reduziert wurde, sollte der neue Text auf dem Bildschirm „Counter: -1“ lauten. Dieser Text wird gesucht und das entsprechende Element (das den Text enthält) wird in der Variablen counterElement gespeichert.
     const counterElement = screen.getByText(/Counter: -1/i);
+
+    // Funktion: Dies ist ein Assertion-Statement (Aussage) von Jest in Kombination mit der Jest-DOM Erweiterung.
+    // Bedeutung: Wir stellen sicher, dass das Element, das den Text „Counter: -1“ enthält, tatsächlich im Dokument (dem simulierten DOM) vorhanden ist.
     expect(counterElement).toBeInTheDocument();
   });
 });
