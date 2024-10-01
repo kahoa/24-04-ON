@@ -3,54 +3,19 @@
 Führe im Terminal folgenden Befehl aus, um eine neue Vite-React-App zu erstellen:
 
 ```bash
-npm create vite@latest my-react-counter-app -- --template react
+git clone https://github.com/tarasowski/jest-react-app
 ```
 
 Wechsle dann in das neu erstellte Verzeichnis:
 
 ```bash
-cd my-react-counter-app
+cd jest-react-app
 ```
 
 Installiere die notwendigen Abhängigkeiten:
 
 ```bash
 npm install
-```
-
-### 2. Installieren von Jest und React Testing Library
-
-Da Vite kein integriertes Jest-Setup hat, müssen wir Jest und die React Testing Library installieren. Führe dazu die folgenden Befehle aus:
-
-```bash
-npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event babel-jest
-```
-
-Außerdem müssen wir Babel konfigurieren, da Jest Babel benötigt, um den Code zu kompilieren.
-
-### 3. Babel konfigurieren
-
-Erstelle eine Datei namens `babel.config.js` im Hauptverzeichnis deiner App und füge diesen Inhalt hinzu:
-
-```javascript
-module.exports = {
-  presets: ['@babel/preset-env', '@babel/preset-react'],
-};
-```
-
-### 4. Jest konfigurieren
-
-Erstelle eine Datei namens `jest.config.js` im Hauptverzeichnis deiner App:
-
-```javascript
-module.exports = {
-  testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.(js|jsx)$': 'babel-jest',
-  },
-  moduleFileExtensions: ['js', 'jsx'],
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
-};
 ```
 
 ### 5. Erstellen des Counter-Komponenten
