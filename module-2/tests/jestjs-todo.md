@@ -1,4 +1,23 @@
-[Setup: JestJS with React](https://github.com/TechstarterGmbH/24-04-ON/blob/main/module-2/tests/jestjs-counter.md)
+### 0. Erstellen einer neuen Vite React App
+
+Führe im Terminal folgenden Befehl aus, um eine neue Vite-React-App zu erstellen:
+
+```bash
+git clone https://github.com/tarasowski/jest-react-app
+```
+
+Wechsle dann in das neu erstellte Verzeichnis:
+
+```bash
+cd jest-react-app
+```
+
+Installiere die notwendigen Abhängigkeiten:
+
+```bash
+npm install
+```
+
 
 ### 1. Erstellen der Todo-Komponente
 
